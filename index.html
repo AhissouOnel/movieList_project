@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire de films</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="head">
+            <h1>Movies manager</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        
+        <div class="editor">
+            <h2>Choose movie !</h2>
+            <form action="">
+                <div class="add-item">
+                    <label for="">Add : </label>
+                    <input type="file" id="inputFile" accept="video/*">
+                    <button id="btnFile" onclick="triggerFileInput()">Choose file</button>
+                </div>
+                <div class="add-item">
+                    <label for="">Title : </label>
+                    <input type="text" id="title">
+                </div>
+                <div class="add-item">
+                    <label for="">Author : </label>
+                    <input type="text" id="author">
+                </div>
+                <div class="add-item">
+                    <label for="">Year : </label>
+                    <input type="text" id="year">
+                </div>
+                <div class="add-item">
+                    <label for="">Director : </label>
+                    <input type="text" id="director">
+                </div>
+                <div class="add-item">
+                    <label for="">Category : </label>
+                    <input type="text" id="category">
+                </div>
+                <button class="confirm">Confirm</button>
+            </form>
+        </div>
+
+        <div class="administrator">
+            <h2>Manage your movies !</h2>
+            <div class="administration-table">
+                <table>
+                    <thead>
+                        <th>Title</th>
+                        <th>Director</th>
+                        <th>Year</th>
+                        <th>Author</th>
+                        <th>Category</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </thead>
+    
+                    <tbody class="movie-details">
+                        <!--<tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><button class="update">Update</button></td>
+                            <td><button class="delete">Delete</button></td>
+                        </tr>-->
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+
+    <script src="/js/function/function.js"></script>
+    <script src="/js/function/app.js"></script>
+</body>
+</html>

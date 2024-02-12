@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #ccc;
+}
+button{
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    background-color: teal;
+    color: white;
+    position: sticky;
+    top: 0;
+    box-shadow: 2px 5px 10px -2px rgb(0, 0, 0, 0.7);
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.head h1{
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    font-size: 2.7rem;
+}
+
+.research{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    gap: 3px;
+}
+.research input{
+    height: 40px;
+    width: 250px;
+    border-radius: 10px;
+    outline: none;
+    border: 0.1px solid teal;
+    padding-left: 10px;
+    font-size: 1rem;
+}
+.research button.search{
+    height: 40px;
+    width: 80px;
+    border: 0.1px solid;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: teal;
+    cursor: pointer;
+    transition: ease-in-out 3ms;
+}
+.research button.search:hover{
+    scale: 1.05;
+}
+
+.container{
+    display: flex;
+    gap: 10px;
+    height: calc(100vh - 80px);
+}
+
+.container .editor{
+    flex: 1;
+    background-color: white;
+}
+.container .administrator{
+    flex: 3;
+    background-color: white;
+}
+
+
+/*********Editor*********/
+.editor{
+    padding-top: 10px;
+}
+.editor h2{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 600;
+}
+.editor .add-item{
+    display: flex;
+    position: relative;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 1px;
+}
+.editor .add-item label{
+    font-size: 1rem;
+    text-decoration: underline;
+}
+.editor .add-item input[type="file"]{
+    border: none;
+    display: none;
+}
+.editor input{
+    position: absolute;
+    right: 10px;
+    width: 230px;
+    height: 25px;
+    border: 0.1px solid;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 10px;
+}
+#btnFile{
+    height: 30px;
+    width: 160px;
+    position: absolute;
+    right: 25%;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 2px 5px 10px -2px rgb(0, 0, 0, 0.7);
+}
+.editor button.confirm{
+    margin: 20px 35%;
+    text-align: center;
+    width: 35%;
+    height: 40px;
+    background-color: teal;
+    box-shadow: 2px 5px 10px -2px rgb(0, 0, 0, 0.7);
+    border: none;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 7px;
+    transition: ease-in-out 3ms;
+    cursor: pointer;
+}
+.editor button.confirm:hover{
+    scale: 1.1;
+}
+
+
+/***********Administrator************/
+.administrator{
+    overflow: auto;
+    padding-top: 10px;
+}
+.administrator h2{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 600;
+}
+.administration-table{
+    overflow: auto;
+}
+table{
+    margin: 15px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    min-width: 95%;
+}
+table td,
+table th{
+    border: 0.1px solid #ccc;
+    padding: 2px;
+    text-align: center;
+}
+table thead{
+    background-color: #efefef;
+}
+table tbody tr td{
+    font-size: 0.9rem;
+    position: relative;
+}
+.update{
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    height: 32px;
+    width: 60px;
+    font-size: 0.9rem;
+    transition: ease-in-out 3ms;
+    cursor: pointer;
+    box-shadow: 2px 5px 10px -2px rgb(0, 0, 0, 0.7);
+}
+.delete{
+    display: block !important;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    height: 32px;
+    width: 60px;
+    font-size: 0.9rem;
+    transition: ease-in-out 3ms;
+    cursor: pointer;
+    box-shadow: 2px 5px 10px -2px rgb(0, 0, 0, 0.7);
+}
+.update:hover,
+.delete:hover{
+    scale: 1.02;
+}
+
+
+.modal{
+    width: 600px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 4px rgb(0 0 0/ 10%), 0 8px 16px rgb(0 0 0/ 33%);
+    border-radius: 5px;
+    display: none;
+    background-color: white;
+    z-index: 2;
+}
+.overlay{
+    background-color: rgba(255, 255, 255, .8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+.close{
+    position: relative;
+}
+.close i{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: gray;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: ease-in-out 3ms;
+}
+.close i:hover{
+    scale: 1.05;
+}
+.divider{
+    border: 0.1px solid #ccc;
+    margin-top: 25px;
+}
+.show{
+    width: 500px;
+    height: 280px;
+    margin: 0px auto;
+}
+
+
